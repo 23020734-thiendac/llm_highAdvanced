@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2600" height="1350" viewBox="0 0 2600 1350">
+<rect width="100%" height="100%" fill="white"/>
+<defs><marker id="arrow" markerWidth="16" markerHeight="16" refX="13" refY="8" orient="auto"><path d="M0,0 L16,8 L0,16 z" fill="black"/></marker></defs>
+<style>.title{font:bold 48px Arial;fill:black}.main{font:bold 29px Arial;fill:black}.sub{font:24px Arial;fill:black}.note{font:25px Arial;fill:black}.box{fill:white;stroke:black;stroke-width:5}.arrow{stroke:black;stroke-width:6;fill:none;marker-end:url(#arrow)}</style>
+<text x="1300.0" y="90" text-anchor="middle" class="title">SƠ ĐỒ KHỐI — LLM_ADVANCED</text>
+<rect x="70" y="250" width="350" height="180" rx="12" class="box"/>
+<text x="245.0" y="340.0" text-anchor="middle" class="main">CÂU LỆNH</text>
+<text x="245.0" y="394" text-anchor="middle" class="sub">người dùng</text>
+<rect x="500" y="250" width="350" height="180" rx="12" class="box"/>
+<text x="675.0" y="340.0" text-anchor="middle" class="main">COMMAND + 9ROUTER</text>
+<text x="675.0" y="394" text-anchor="middle" class="sub">hiểu yêu cầu</text>
+<rect x="930" y="250" width="350" height="180" rx="12" class="box"/>
+<text x="1105.0" y="340.0" text-anchor="middle" class="main">JSON PLAN</text>
+<text x="1105.0" y="394" text-anchor="middle" class="sub">pick / place / home</text>
+<rect x="1360" y="250" width="350" height="180" rx="12" class="box"/>
+<text x="1535.0" y="322.0" text-anchor="middle" class="main">VALIDATOR +</text>
+<text x="1535.0" y="360.0" text-anchor="middle" class="main">EXECUTOR</text>
+<text x="1535.0" y="394" text-anchor="middle" class="sub">check zone</text>
+<rect x="1790" y="250" width="350" height="180" rx="12" class="box"/>
+<text x="1965.0" y="322.0" text-anchor="middle" class="main">MOVEIT2 +</text>
+<text x="1965.0" y="360.0" text-anchor="middle" class="main">ROBOT SKILLS</text>
+<text x="1965.0" y="394" text-anchor="middle" class="sub">gripper + path</text>
+<rect x="2220" y="250" width="300" height="180" rx="12" class="box"/>
+<text x="2370.0" y="322.0" text-anchor="middle" class="main">UR3 +</text>
+<text x="2370.0" y="360.0" text-anchor="middle" class="main">GAZEBO</text>
+<text x="2370.0" y="394" text-anchor="middle" class="sub">thực thi</text>
+<line x1="420" y1="340" x2="485" y2="340" class="arrow"/>
+<line x1="850" y1="340" x2="915" y2="340" class="arrow"/>
+<line x1="1280" y1="340" x2="1345" y2="340" class="arrow"/>
+<line x1="1710" y1="340" x2="1775" y2="340" class="arrow"/>
+<line x1="2140" y1="340" x2="2205" y2="340" class="arrow"/>
+<line x1="1400" y1="760" x2="1530" y2="435" class="arrow"/>
+<line x1="2020" y1="760" x2="1530" y2="435" class="arrow"/>
+<rect x="1150" y="760" width="500" height="190" rx="12" class="box"/>
+<text x="1400.0" y="807.0" text-anchor="middle" class="main">MÔI TRƯỜNG</text>
+<text x="1400.0" y="841.0" text-anchor="middle" class="note">green random</text>
+<text x="1400.0" y="875.0" text-anchor="middle" class="note">orange PLUS</text>
+<text x="1400.0" y="909.0" text-anchor="middle" class="note">2 vùng tạm</text>
+<rect x="1770" y="760" width="500" height="190" rx="12" class="box"/>
+<text x="2020.0" y="823.0" text-anchor="middle" class="main">CAMERA / STATE</text>
+<text x="2020.0" y="857.0" text-anchor="middle" class="note">object location</text>
+<text x="2020.0" y="891.0" text-anchor="middle" class="note">zone FREE / CHIẾM</text>
+</svg>
