@@ -1,13 +1,13 @@
-# UR3 LLM — `llm_advanced` và `llm_highlevel`
+# Bài thực hành 3 — LLM nâng cao
 
 Hai package ROS 2 cho mô phỏng tay máy UR3 trong Gazebo Fortress, dùng 9Router để chuyển câu lệnh tự nhiên thành chuỗi skill `pick`, `place`, `home`.
 
 ## Hai chế độ trong repository
 
-| Package | Kịch bản | Vùng tạm |
-|---|---|---|
-| `llm_advanced` | Green chiếm ngẫu nhiên một trong A/B/C; có thể xử lý hai vật cản bằng hai vùng tạm | `temporary_zone`, `temporary_zone2` |
-| `llm_highlevel` | Green chiếm một đích và thêm một khối đỏ/vàng/xanh dương nằm sai đích; khi hai vùng tạm đầy thì dùng vùng chung | `temporary_zone`, `temporary_zone2`, `common_zone` |
+| Package | Kịch bản |
+|---|---|
+| `llm_advanced` | Green chiếm ngẫu nhiên một trong A/B/C; hệ thống xử lý vật cản qua hai vùng tạm. |
+| `llm_highlevel` | Green chiếm một đích ngẫu nhiên; thêm một trong ba khối đỏ/vàng/xanh dương chiếm một zone khác nhưng nằm sai đích; zone đích còn lại dùng cho khối Orange. |
 
 Cả hai package đều kiểm tra trạng thái trước khi đặt vật, gripper hai ngón chạy chung trajectory và camera RGB gắn sát carrier của đầu công tác.
 
@@ -110,9 +110,9 @@ ros2 run llm_highlevel command --timeout 1800 \
 
 Ở chế độ này green và một khối theo MSSV có thể cùng chiếm các đích. Nếu `temporary_zone` và `temporary_zone2` đã đầy, executor dùng `common_zone` màu xám rồi tiếp tục xử lý.
 
-## Điều khiển PLUS bằng bàn phím
+## Điều khiển khối Orange bằng teleop
 
-Mở terminal riêng sau khi launch:
+Mở terminal riêng sau khi launch để điều khiển khối Orange:
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -127,7 +127,7 @@ Hoặc với chế độ ba đích:
 ros2 run llm_highlevel command --teleop
 ```
 
-Phím điều khiển:
+Phím teleop:
 
 - `a`: đưa khối cam vào zone A.
 - `b`: đưa khối cam vào zone B.
@@ -137,9 +137,9 @@ Phím điều khiển:
 
 Nếu workspace đã cài package nền, lệnh tương đương là `ros2 run ur3_llm_control command --teleop`.
 
-## Terminal camera và kiểm tra trạng thái
+## Camera Detect + check
 
-Camera monitor in vị trí từng khối, trạng thái `TRỐNG/CHIẾM` của A/B/C, vùng tạm và vật đang được giữ:
+Camera Detect + check in vị trí từng khối, trạng thái `TRỐNG/CHIẾM` của A/B/C, vùng tạm và vật đang được giữ:
 
 ```bash
 source /opt/ros/humble/setup.bash

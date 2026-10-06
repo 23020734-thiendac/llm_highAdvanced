@@ -1,4 +1,4 @@
-# `llm_highlevel` — Bài thực hành tuần 3
+# Bài thực hành 3 — LLM nâng cao (`llm_highlevel`)
 
 Package ROS 2 độc lập cho mô phỏng UR3 trong Gazebo Fortress. Package cũ `ur3_llm_control` được giữ nguyên; tuần 3 chạy bằng package mới này.
 
@@ -53,7 +53,7 @@ ros2 run llm_highlevel command "Hãy lấy khối màu vàng và đặt nó vào
 ros2 run llm_highlevel command "Đưa khối cam vào vùng tạm thời."
 ```
 
-## Terminal camera theo dõi zone
+## Camera Detect + check
 
 Mở terminal riêng sau khi launch và chạy:
 
@@ -88,7 +88,7 @@ ros2 run llm_highlevel command --timeout 1800 \
 LLM chỉ sinh danh sách skill; validator kiểm tra schema, vật, đích và thứ tự trước khi robot chuyển động.
 Nếu temporary_zone và temporary_zone2 đã có vật, occupant tiếp theo được chuyển vào common_zone.
 
-## Mức 3 — PLUS với khối cam
+## Điều khiển khối Orange bằng teleop
 
 Bật teleop trong terminal riêng:
 
